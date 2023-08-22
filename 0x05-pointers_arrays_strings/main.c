@@ -9,7 +9,7 @@ int main(void)
 {
     char *str;
 
-    str = "0123456789";
-    puts2(str);
+    str = "Holberton!";
+    print_rev(str);
     return (0);
 }

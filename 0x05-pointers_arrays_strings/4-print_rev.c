@@ -35,4 +35,5 @@ void print_rev(char *s)
 			num--;
 		}
 	}
+	_putchar('\n');
 }
