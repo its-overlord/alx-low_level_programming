@@ -14,7 +14,7 @@ int _strlen(char *s)
 	{
 		count++;
 	}
-	return (count);
+	return (count - 1);
 }
 
 /**
@@ -27,13 +27,10 @@ void print_rev(char *s)
 
 	num = _strlen(s);
 
-	if (num > 0)
+	while (num >= 0)
 	{
-		while (num >= 0)
-		{
-			_putchar(s[num]);
-			num--;
-		}
+		_putchar(s[num]);
+		num--;
 	}
 	_putchar('\n');
 }
