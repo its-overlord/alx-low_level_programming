@@ -5,7 +5,7 @@
  * the destination string
  * @src: the source string
  * @dest: the destination string
- * Retutn: the destination string
+ * Return: the destination string
  */
 char *_strcpy(char *dest, char *src)
 {
