@@ -3,6 +3,8 @@
 
 /**
  * main - multiples two numbers
+ * @argc: number of command line arguements
+ * @argv: an array of command line arguements
  * Return: always 0
  */
 int main(int argc, char*argv[])
