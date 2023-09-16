@@ -7,7 +7,7 @@
  * @argv: an array of command line arguements
  * Return: always 0
  */
-int main(int argc, char*argv[])
+int main(int argc, char *argv[])
 {
 	int i, sum;
 
