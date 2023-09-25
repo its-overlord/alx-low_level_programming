@@ -10,7 +10,9 @@
 char *_strdup(char *str)
 {
 	char *ptr;
-	int i;
+	int i, j;
+
+	j = 0;
 
 	if (str == NULL)
 		return (NULL);
@@ -20,12 +22,12 @@ char *_strdup(char *str)
 
 	if (ptr != NULL)
 	{
-		while (str[i] != '\0')
+		while (j < i)
 		{
-			ptr[i] = str[i];
-			i++;
+			ptr[j] = str[j];
+			j++;
 		}
-		ptr[i] = '\0';
+		ptr[j] = '\0';
 		return (ptr);
 	}
 	else
