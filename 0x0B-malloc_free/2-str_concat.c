@@ -21,41 +21,28 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 	ptr = malloc((i + 1) * sizeof(char));
-	if (ptr != NULL)
-	{
-		j = 0;
-		if (s1 != NULL)
-		{
-			while (s1[j] != '\0')
-			{
-				ptr[j] = s1[j];
-				j++;
-			}
-		}
-		else
-		{
-			ptr[j] = '\0';
-			j++;
-		}
-		if (s2 != NULL)
-		{
-			k = 0;
-			while (s2[k] != '\0')
-			{
-				ptr[j] = s2[k];
-				k++;
-				j++;
-			}
-		}
-		else
-		{
-			ptr[j] = '\0';
-			j++;
-		}
-		ptr[j] = '\0';
-		return (ptr);
-		free(ptr);
-	}
-	else
+	if (ptr == NULL)
 		return (NULL);
+	j = 0;
+	if (s1)
+	{
+		while (s1[j] != '\0')
+		{
+			ptr[j] = s1[j];
+			j++;
+		}
+	}
+	if (s2)
+	{
+		k = 0;
+		while (s2[k] != '\0')
+		{
+			ptr[j] = s2[k];
+			k++;
+			j++;
+		}
+	}
+	ptr[j] = '\0';
+	return (ptr);
+	free(ptr);
 }
