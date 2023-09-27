@@ -24,6 +24,7 @@ char *str_concat(char *s1, char *s2)
 	if (ptr == NULL)
 		return (NULL);
 	j = 0;
+	k = 0;
 	if (s1)
 	{
 		while (s1[j] != '\0')
@@ -34,7 +35,6 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2)
 	{
-		k = 0;
 		while (s2[k] != '\0')
 		{
 			ptr[j] = s2[k];
@@ -44,5 +44,4 @@ char *str_concat(char *s1, char *s2)
 	}
 	ptr[j] = '\0';
 	return (ptr);
-	free(ptr);
 }
