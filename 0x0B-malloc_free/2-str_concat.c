@@ -10,10 +10,11 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	int i = j = k = 0;
+	int i, j, k;
 
 	for (i = 0; s1[i] != '\0'; i++)
 		;
+	j = 0;
 	while (s2[j] != '\0')
 	{
 		j++;
@@ -31,9 +32,9 @@ char *str_concat(char *s1, char *s2)
 				j++;
 			}
 		}
-
 		if (s2)
 		{
+			k = 0;
 			while (s2[k] != '\0')
 			{
 				ptr[j] = s2[k];
