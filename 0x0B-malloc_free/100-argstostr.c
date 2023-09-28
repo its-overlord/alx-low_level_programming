@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 	if (nstr == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	for (i = 0; i < ac; i++, k++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++, k++)
 			nstr[k] = av[i][j];
