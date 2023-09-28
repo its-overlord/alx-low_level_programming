@@ -16,13 +16,12 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	size = 0;
+	for (i = 0; i < ac; i++, size++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
-		{
-			size++;
-		}
-		size++;
+		for (j = 0; av[i][j] != '\0'; j++, size++)
+			;
+		;
 	}
 
 	nstr = malloc((sizeof(char) * size) + 1);
